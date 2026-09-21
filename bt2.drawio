@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-09-21T04:40:59.480Z" agent="RikkeiTool" version="24.0.0">
+  <diagram id="Page-1" name="Sơ đồ Activity Diagram luồng xử lý tính năng Nhắc uống thuốc RikkeiCare">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Đến giờ uống thuốc đã hẹn" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#27ae60;strokeColor=#2ecc71;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="378" y="50" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="push_popup" value="Hệ thống hiển thị Pop-up thông báo nhắc thuốc" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="140" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="read_notice" value="Bệnh nhân đọc thông tin tên thuốc và liều lượng" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="230" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="click_btn" value="Bệnh nhân nhấn nút &apos;Đã uống&apos;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="320" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="record_log" value="Hệ thống ghi nhận trạng thái &apos;Đã uống&apos; vào DB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="410" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="show_toast" value="Hiển thị Toast thông báo &apos;Đã ghi nhận&apos;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="500" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="close_popup" value="Hệ thống tự động đóng khối thông báo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="590" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="Hoàn tất luồng nhắc thuốc" style="ellipse;html=1;shape=endState;fillColor=#e74c3c;strokeColor=#c0392b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="378" y="680" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="start" target="push_popup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="push_popup" target="read_notice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="read_notice" target="click_btn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="click_btn" target="record_log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="record_log" target="show_toast">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="show_toast" target="close_popup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="close_popup" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
